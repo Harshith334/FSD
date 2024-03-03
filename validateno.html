@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <script>
+        function validate()
+        {
+            var text =document.getElementById("text1").value;
+            var regex=/^[6-9]\d{9}$/;
+            if(regex.test(text))
+            {
+                document.getElementById("labtxt").innerHTML="valid number";
+                document.getElementById("labtxt").style.visibility="visible";
+                            }
+            else{
+                document.getElementById("labtxt").innerHTML="Invalid number";
+                document.getElementById("labtxt").style.visibility="visible";
+            }
+        }
+    </script>
+    </head>
+    <form>
+        <input id="text1" placeholder="Enter mobile no" type="text"/><br>
+        <label id="labtxt">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>
