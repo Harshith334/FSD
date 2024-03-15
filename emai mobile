@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script> 
+    function validate(){
+    var inp = document.getElementById("texts").value;
+    var regex=/^([a-z 0-9\.-]+)@([a-z 0-9-]+).([a-z]{2,10})(.[a-z]{2,10})?$/;
+    if(regex.test(inp)){
+        document.getElementById("demo").innerHTML="valid";
+        document.getElementById("demo").style.visibility="visible";
+        document.getElementById("demo").style.color="green";
+    }
+    else{
+        document.getElementById("demo").innerHTML="invalid";
+    }
+}
+    </script>
+    </head>
+<body>
+    <form>
+            <h1>mobile number</h1>
+            <input type="text" placeholder="enter mobile" id="texts" >
+            <label id="demo" style="color:red;visibility:hidden">invalid</label>
+            <button  onclick="validate()" type="button">subimt</button>
+    </form>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script> 
+    function validate(){
+    var inp = document.getElementById("texts").value;
+    var regex=/^[6-9][0-9]{9}$/;
+    if(regex.test(inp)){
+        document.getElementById("demo").innerHTML="valid";
+        document.getElementById("demo").style.visibility="visible";
+        document.getElementById("demo").style.color="green";
+    }
+    else{
+        document.getElementById("demo").innerHTML="invalid";
+    }
+}
+    </script>
+    </head>
+<body>
+    <form>
+            <h1>mobile number</h1>
+            <input type="text" placeholder="enter mobile" id="texts" >
+            <label id="demo" style="color:red;visibility:hidden">invalid</label>
+            <button  onclick="validate()" type="button">subimt</button>
+    </form>
+</body>
+</html>
