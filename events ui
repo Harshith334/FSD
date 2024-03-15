@@ -149,3 +149,50 @@
 
 </body>
 </html>
+
+
+
+///mojuse
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events in jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+  #box {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    margin: 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+  $(document).ready(function() {
+    $("#box").on({
+      click: function() {
+        $(this).css("background-color", "red");
+      },
+      dblclick: function() {
+        $(this).css("background-color", "green");
+      },
+      mouseenter: function() {
+        $(this).css("transform", "scale(1.1)");
+      },
+      mouseleave: function() {
+        $(this).css("transform", "scale(1)");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
