@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Droppable Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    /* Style for the droppable and draggable elements */
+    #droppable {
+      width: 200px;
+      height: 200px;
+      background-color: #f8d7da;
+      border: 2px dashed #dc3545;
+      text-align: center;
+      line-height: 200px;
+      margin-bottom: 20px;
+    }
+    #draggable {
+      width: 100px;
+      height: 100px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      cursor: move;
+    }
+  </style>
+</head>
+<body>
+
+<div id="droppable" class="ui-widget-header">
+  Drop Here
+</div>
+
+<div id="draggable" class="ui-widget-content">
+  Drag Me
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  // Make the #draggable element draggable
+  $("#draggable").draggable();
+
+  // Make the #droppable element droppable
+  $("#droppable").droppable({
+    drop: function(event, ui) {
+      $(this).addClass("ui-state-highlight").text("Dropped!");
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draggable Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    /* Style for the draggable element */
+    #draggable {
+      width: 100px;
+      height: 100px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      cursor: move;
+    }
+  </style>
+</head>
+<body>
+
+<div id="draggable" class="ui-widget-content">
+  Drag Me
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  // Make the #draggable element draggable
+  $("#draggable").draggable();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selectable Example</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+  /* Style for the selectable elements */
+  #selectable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+  }
+  #selectable li {
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 1.4em;
+    height: 18px;
+  }
+  #selectable .ui-selecting {
+    background: #007bff;
+    color: white;
+  }
+  #selectable .ui-selected {
+    background: #dc3545;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<ol id="selectable">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+</ol>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  // Make the #selectable element selectable
+  $("#selectable").selectable();
+</script>
+
+</body>
+</html>
